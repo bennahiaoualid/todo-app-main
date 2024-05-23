@@ -30,7 +30,6 @@ function loadTasks(filterOp = "All") {
         if ((filterOp === "Completed" && task.completed) ||
             (filterOp === "Active" && !task.completed) ||
             (filterOp === "All")) {
-           console.log(taskItem)
             taskList.appendChild(taskItem);
         }
     });
