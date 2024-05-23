@@ -44,9 +44,10 @@ function createTaskElement(task) {
     taskItem.setAttribute("class", "todo-content");
     taskItem.innerHTML = `
         <span class="check-btn"></span>
-        <p>${task.text}</p>
+        <p></p>
         <img class="remove-task" src="./images/icon-cross.svg" alt="">
     `;
+    taskItem.querySelector("p").textContent = task.text
     taskItem.classList.toggle('completed', task.completed);
 
     taskItem.querySelector(".check-btn").addEventListener('click', toggleTaskState);
